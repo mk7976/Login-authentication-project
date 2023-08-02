@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .main {
+            text-align:center;
+        }
+        .marq {
+            padding-top:15px;
+            padding-bottom:15px;
+        }
+        .geek1 {
+            font-size:36px;
+            font-weight:bold;
+            color:white;
+            padding-bottom:10px;
+        }
+        </style>
+    <title>Dk_Web</title>
+</head>
+<body>
+<div class = "main">
+    <marquee class="marq" bgcolor = "Green" direction = "left" loop="" >
+        <div class="geek1"><i> Welcome to Mk Web...</i></div>
+    </marquee>
+    </div>
+
+    <h1 class="text-center text-2xl mt-4 font-bold">Login Form</h1>
+
+    <form action="{% url "Login" %} " class="ml-14" method ="post">{% csrf_token %}
+        <div class="w-1/3 mx-auto mt-14 border border-gray-500 px-2 py-10 rounded-md pl-14">
+        <div>User ID :</label>
+        <input class="border border-gray-400 p-1 rounded-md ml-14" type="text" name="w1" placeholder="Enter your name">
+    </div>
+
+    <div class="mt-4">
+        <label>Password :</label>
+        <input class="border border-gray-400 p-1 rounded-md ml-10" type="password" name="w2" placeholder="Enter your password">
+    </div>
+       <p style="color:red">{{msg}}</p>
+    <button class="bg-blue-500 text-white rounded-md ml-32 mt-10 font-semibold px-2 py-1 hover:bg-teal-200 hover:text-black">Login</button>
+</div>
+
+    </form>
+</body>
+</html>
